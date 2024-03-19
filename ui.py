@@ -10,8 +10,8 @@ THEME_COLOR = "#375362"
 
 class QuizInterface:
 
-    def __init__(self, quiz_brain: QuizBrain):  # def function(parameter1[: data_type], parameter2[: data_type]):
-        self.quiz = quiz_brain  # QuizBrain object available inside QuizInterface
+    def __init__(self, quiz_brain: QuizBrain):
+        self.quiz = quiz_brain
         self.window = Tk()
         self.window.title('Quizzler')
         self.window.config(padx=20, pady=20, bg=THEME_COLOR)
@@ -58,7 +58,7 @@ class QuizInterface:
             self.score_label.config(text=f'Score: {self.quiz.score}')
             q_text = self.quiz.next_question()
             self.canvas.itemconfig(self.canvas_text, text=q_text)
-        else:  # if there is no more questions in question_bank
+        else:
             self.canvas.itemconfig(self.canvas_text, text='Game Completed!')
             self.green_button.config(state='disabled')
             self.red_button.config(state='disabled')

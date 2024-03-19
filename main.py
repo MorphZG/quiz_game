@@ -15,6 +15,3 @@ for question in question_data:
 quiz = QuizBrain(question_bank)
 quiz_ui = QuizInterface(quiz)
 
-
-#modules: tkinter, requests, html
-#tags: game, api, gui, oop, canvas, button, label
